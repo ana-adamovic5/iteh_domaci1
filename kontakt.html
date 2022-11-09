@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aerial Sports Academy</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,600;0,700;1,100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+    <section class="kontakt-header">
+        <nav>
+            <!-- <a href="index.php"><img src="img/logo2.jpeg"></a> -->
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.php">POCETNA</a></li>
+                    <li><a href="">ZAKAZIVANJE</a></li>
+                    <li><a href="treninzi.html">TRENINZI</a></li>
+                    <li><a href="kontakt.html">KONTAKT</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+        <div class="text-box">
+            <h1>Kontaktiraj nas</h1>
+            
+        </div>
+    </section>
+
+    <section class="location">  
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2830.820350661937!2d20.46442062879441!3d44.80484971224566!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x475a7aa0ce0f04cf%3A0xe157a996ac2b74bd!2z0JHQtdC-0LPRgNCw0LTRgdC60LAgMjItNDQsINCR0LXQvtCz0YDQsNC0IDExMDAw!5e0!3m2!1ssr!2srs!4v1667842444936!5m2!1ssr!2srs" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </section>
+
+    <section class="kontaktiraj-nas">
+        <div class="row">
+            <div class="kontakt-col">
+                <div>
+                    <i class="fa fa-home"></i>
+                    <span>
+                        <h5>Beogradska 22</h5>
+                        <p>11000 Beograd, RS</p>
+                    </span>
+                </div>
+            
+            
+                <div>
+                    <i class="fa fa-phone"></i>
+                    <span>
+                        <h5>0641273844</h5>
+                        <p>Ponedeljak-Nedelja, 09h-18h</p>
+                    </span>
+                </div>
+            
+            
+                <div>
+                    <i class="fa fa-envelope-o"></i>
+                    <span>
+                        <h5>adamovicana01@gmail.com</h5>
+                        <p>Postavite nam pitanje.</p>
+                    </span>
+                </div>
+            </div>
+            <div class="kontakt-col">
+                <form action="form-handler.php" method="post">
+                    <input type="text" name="ime" placeholder="Unesite Vase ime" required>
+                    <input type="email" name="email_adresa" placeholder="Unesite Vasu e-mail adresu" required>
+                    <input type="text" name="naslov" placeholder="Unesite naslov" required>
+                    <textarea  rows="8" name="poruka" placeholder="Poruka"></textarea>
+                    <button type="submit" class="hero-btn purple-btn">Posalji</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!--JavaScript for toggle menu-->
+    <script>
+        var navLinks=document.getElementById("navLinks");
+
+        function showMenu(){
+            navLinks.style.right="0";
+
+        }
+
+        function hideMenu(){
+            navLinks.style.right="-200px"
+        }
+    </script>
+</body>
+</html>

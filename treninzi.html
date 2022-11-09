@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Treninzi</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,600;0,700;1,100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+    <section class="treninzi-header">
+        <nav>
+            <!-- <a href="index.php"><img src="img/logo2.jpeg"></a> -->
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.php">POCETNA</a></li>
+                    <li><a href="zakazivanje.php">ZAKAZIVANJE</a></li>
+                    <li><a href="treninzi.html">TRENINZI</a></li>
+                    <li><a href="kontakt.html">KONTAKT</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+        <div class="text-box">
+            <h1>O nasim treninzima</h1>
+            <p>U nasoj akademiji imas priliku da treniras Aerial Hoop, Hammock i Aerial Yoga. <br>
+            Pored toga imamo treninge Core, Pilates i Stretch koji ti pomazu da budes u formi za aerobne treninge. 
+            </p><br>
+        </div>
+    </section>
+
+    <!--prikaz treninga-->
+    <section class="treninzi">
+        <h1>Upoznaj se sa nasim programom</h1>
+        <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti et labore tenetur voluptates, provident deserunt!</p> -->
+
+        <div class="row">
+            <div class="treninzi-col">
+                <img src="img/hoop.jpg" alt="">
+                <h3>Aerial Hoop</h3>
+                <p>Aerial hoop (obruč) je rekvizit koji vam pruža osećaj da lebdite u vazduhu.
+                    Ono što je karakteristično za ovu discipline je da se redovnim treniranjem veoma brzo razvija snaga i izdržljivost te je i samo napredovanje brzo i primetno.
+                    Kroz poze i kombinacije poza na obruču svako će neminovno kod sebe razviti eleganciju pokreta i bolju kontrolu nad kretanjima svog tela.</p>
+
+            </div>
+            <div class="treninzi-col">
+                <img src="img/aerial-yoga.jpg" alt="">
+                <h3>Aerial Yoga</h3>
+                <p>Kombinuje joga pokrete sa vežbama snage, fleksibilnosti, vežbama disanja ali i akrobatikom. Vežbe se izvode uz pomoć velike svilene marame koja visi sa plafona i koja pridržava vežbače kako bi mogli da izvode pokrete u vazduhu.</p>
+            </div>
+            <div class="treninzi-col">
+                <img src="img/hammock.jpg" alt="">
+                <h3>Hammock</h3>
+                <p>Hammock (svila) je rekvizit u koji se jako lako zaljubljujemo jer osim što nam pomaže da razvijemo snagu i fleksibilnost, u njemu se uvek osećamo ženstveno i nežno. I dok se trudimo da na treningu napravimo dobru pozu koju možemo iskoristiti za slikanje, nismo ni svesni koliko jačamo mišiće ruku, dok u isto vreme istežemo svaki deo tela.</p>
+            </div>    
+        </div>
+        <div class="row">
+            <div class="treninzi-col">
+                <img src="img/pilates.jpg" alt="">
+                <h3>Pilates</h3>
+                <p>Pilatesom dobijaš u isto vreme fizičku i mentalnu stabilnost, snagu, opuštenost i gipkost. Izgradićeš svoje telo na jedan potpuno drugačiji način.
+                    Bez agresivnih i napornih vežbi pilates ti donosi formu koja će drugima biti uzor.
+                    Imaćeš bolje držanje i opšti osećaj ravnoteže u životu.</p>
+            </div>
+            <div class="treninzi-col">
+                <img src="img/core.jpg" alt="">
+                <h3>Core</h3>
+                <p>Kada govorimo o funkcionalnom, zdravom telu, telu koje se nesmetano i efikasno kreće mislimo na visok nivo stabilnosti i ravnoteže za koje je zadužen core.
+                    Snažan core radi u sadejstvu sa ostalim mišićnim grupama, mišićima koji su pokretači pokreta. Tako ga treba i trenirati.
+                    Potrebno je da naučimo mišiće da rade zajedno jer ćemo samo na taj način dobiti bolje sportske performance I podići funkciju našeg tela na viši nivo.
+                </p>
+            </div>
+            <div class="treninzi-col">
+                <img src="img/stretch.png" alt="">
+                <h3>Stretch</h3>
+                <p>Treninzi aktivne I pasivne fleksibilnosti I mobilnosti na kojima se rade bazične vežbe istezanja za razvijanje dodatnih mogućnosti sopstvenog tela koje možemo primeniti u svojim vazdušnim akrobacijama. 
+                Stretch treninzi su podeljeni na gornji deo tela (leđa i ramena) i donji deo tela (noge) i celo telo u tri odvojena treninga kako bismo mogli svakom delu tela da se posvetimo dovoljno detaljno.</p>
+            </div>    
+        </div>
+    </section>
+
+    <!--JavaScript for toggle menu-->
+    <script>
+        var navLinks=document.getElementById("navLinks");
+
+        function showMenu(){
+            navLinks.style.right="0";
+
+        }
+
+        function hideMenu(){
+            navLinks.style.right="-200px"
+        }
+    </script>
+</body>
+</html>
