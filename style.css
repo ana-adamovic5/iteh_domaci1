@@ -95,6 +95,27 @@ nav img {
     transition: 1s;
 }
 
+.purple-btn {
+    border: 1px solid #d436f4;
+    background: transparent;
+    color: #d436f4;
+}
+
+.purple-btn:hover {
+    color: #fff;
+}
+
+
+.purple-btn1 {
+    border: 1px solid #d436f4;
+    background: #d436f4;
+    color: #fff;
+}
+
+.purple-btn1:hover {
+    color: #fff;
+}
+
 nav .fa {
     display: none;
 }
@@ -256,14 +277,24 @@ nav .fa {
     box-sizing: border-box;
 }
 
-.purple-btn {
-    border: 1px solid #d436f4;
-    background: transparent;
-    color: #d436f4;
-}
-
-.purple-btn:hover {
-    color: #fff;
-}
 
 /*--strana za zakazivanje--*/
+@media(max-width: 700px) {
+    .container {
+        flex-direction: column;
+    }
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    padding: 80px 0;
+}
+
+#displayDataTable {
+    text-align: center;
+}
+
+.form-label {
+    color: #89269d;
+}
