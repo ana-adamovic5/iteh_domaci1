@@ -53,6 +53,8 @@
                         <label for="completeVreme" class="form-label">Vreme</label>
                         <input type="text" class="form-control" id="completeVreme" placeholder="Unesite vreme termina">
                     </div>
+
+                    <!--include once-->
                     <div class="mb-4">
                         <label for="completeTrening" class="form-label">Trening</label>
                         <select id="completeTrening">
@@ -135,8 +137,27 @@
             Dodaj termin
         </button>
         <div id="displayDataTable"></div>
-
+        <input type="text" class="form-control" id="live-search" onkeyup="showHint(this.value)" placeholder="Pretrazi..">
+        <div id="emailHelp" class="form-text">Predlog: <span id="txtHint"></div>
     </div>
+
+    <script>
+        function showHint(str) {
+            if (str.length == 0) {
+                document.getElementById("txtHint").innerHTML = "";
+                return;
+            } else {
+                var xmlhttp = new XMLHttpRequest();
+                xmlhttp.onreadystatechange = function() {
+                    if (this.readyState == 4 && this.status == 200) {
+                        document.getElementById("txtHint").innerHTML = this.responseText;
+                    }
+                };
+                xmlhttp.open("GET", "gethint.php?q=" + str, true);
+                xmlhttp.send();
+            }
+        }
+    </script>
 
     <!-- Bootstrap JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
@@ -161,6 +182,26 @@
         //tabela se uvek prikazuje
         $(document).ready(function() {
             displayData();
+
+            $("#live-search").keyup(function() {
+                var input = $(this).val();
+                ///alert(input);
+
+                if (input != "") {
+                    $.ajax({
+                        url: "live-search.php",
+                        method: "POST",
+                        data: {
+                            input: input
+                        },
+                        success: function(data) {
+                            $("#displayDataTable").html(data);
+                        }
+                    })
+                } else {
+                    displayData();
+                }
+            })
         })
 
         //display.php
@@ -255,6 +296,8 @@
 
         }
     </script>
+
+
 </body>
 
 </html>
