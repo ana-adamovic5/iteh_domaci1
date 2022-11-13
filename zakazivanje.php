@@ -24,7 +24,7 @@
                 <i class="fa fa-times" onclick="hideMenu()"></i>
                 <ul>
                     <li><a href="index.php">POCETNA</a></li>
-                    <li><a href="zakazivanje.php">ZAKAZIVANJE</a></li>
+                    <!-- <li><a href="zakazivanje.php">ZAKAZIVANJE</a></li> -->
                     <li><a href="treninzi.html">TRENINZI</a></li>
                     <li><a href="kontakt.html">KONTAKT</a></li>
                 </ul>
