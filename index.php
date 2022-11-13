@@ -6,7 +6,8 @@ if (isset($_POST['usernameModal']) && isset($_POST['passwordModal'])) {
     $uname = $_POST['usernameModal'];
     $upass = $_POST['passwordModal'];
 
-    $korisnik = new Korisnik(1, $uname, $upass);
+    setcookie("TestCookie", $uname, time() + 3600);
+    $korisnik = new Korisnik(null, $uname, $upass);
     $odg = Korisnik::logInUser($korisnik, $conn);
 
     if ($odg->num_rows == 1) {
@@ -56,7 +57,6 @@ if (isset($_POST['usernameModal']) && isset($_POST['passwordModal'])) {
                 <i class="fa fa-times" onclick="hideMenu()"></i>
                 <ul>
                     <li><a href="index.php">POCETNA</a></li>
-                    <!-- <li><a href="zakazivanje.php">ZAKAZIVANJE</a></li> -->
                     <li><a href="treninzi.html">TRENINZI</a></li>
                     <li><a href="kontakt.html">KONTAKT</a></li>
                 </ul>
@@ -87,7 +87,7 @@ if (isset($_POST['usernameModal']) && isset($_POST['passwordModal'])) {
                     <form action="" method="POST">
                         <div class="mb-3">
                             <label for="usernameModal" class="form-label">Korisnicko ime</label>
-                            <input type="text" class="form-control" id="usernameModal" name="usernameModal" aria-describedby="emailHelp" required>
+                            <input type="text" class="form-control" id="usernameModal" name="usernameModal" autocomplete="off" aria-describedby="emailHelp" required>
                         </div>
                         <div class="mb-3">
                             <label for="passwordModal" class="form-label">Sifra</label>

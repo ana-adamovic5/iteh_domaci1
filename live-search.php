@@ -16,7 +16,6 @@ if (isset($_POST['input'])) {
                     <th scope="col">Vreme</th>
                     <th scope="col">Trening</th>
                     <th scope="col">Trener</th>
-                    <th scope="col">Opcije</th>
                 </tr>
             </thead>
             <tbody>
@@ -35,7 +34,6 @@ if (isset($_POST['input'])) {
                         <td><?php echo $vreme; ?></td>
                         <td><?php echo $trening; ?></td>
                         <td><?php echo $trener; ?></td>
-                        <td><button class="hero-btn purple-btn" onclick="promeniTermin(' . $id . ')">Promeni</button> <button class="hero-btn purple-btn1" onclick="obrisiTermin(' . $id . ')"> Obrisi </button></td>
                     </tr>
 
                 <?php

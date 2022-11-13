@@ -32,7 +32,7 @@
             <i class="fa fa-bars" onclick="showMenu()"></i>
         </nav>
         <div class="text-box">
-            <h1>Zakazi svoj termin</h1>
+            <h1>Zdravo <?php echo $_COOKIE["TestCookie"]; ?> </h1>
             <p>Zakazivanje za svaki trening je obavezno i moguce je ga izvrsiti do 6 dana unapred. <br>
                 Otkazivanje treninga bez naknade moguce je do 12 sati pre pocetka treninga, u suprotnom se trening racuna kao iskoriscen.
             </p><br>
@@ -54,26 +54,31 @@
                         <input type="text" class="form-control" id="completeVreme" placeholder="Unesite vreme termina">
                     </div>
 
-                    <!--include once-->
+
                     <div class="mb-4">
                         <label for="completeTrening" class="form-label">Trening</label>
                         <select id="completeTrening">
-                            <option>Aerial Hoop</option>
-                            <option>Aerial Yoga</option>
-                            <option>Hammock</option>
-                            <option>Pilates</option>
-                            <option>Core</option>
-                            <option>Stretch</option>
+                            <?php
+                            include "baza/insert.php";
+                            while ($trening = mysqli_fetch_assoc($treninzi)) {
+                            ?>
+                                <option> <?php echo $trening['naziv']; ?></option>
+                            <?php
+                            }
+                            ?>
                         </select>
                     </div>
                     <div class="mb-4">
                         <label for="completeTrener" class="form-label">Trener</label>
                         <select id="completeTrener">
-                            <option>Anja</option>
-                            <option>Milan</option>
-                            <option>Sara</option>
-                            <option>Marija</option>
-                            <option>Marko</option>
+                            <?php
+                            include "baza/insert.php";
+                            while ($trener = mysqli_fetch_assoc($treneri)) {
+                            ?>
+                                <option> <?php echo $trener['ime']; ?></option>
+                            <?php
+                            }
+                            ?>
                         </select>
                     </div>
 
@@ -103,22 +108,27 @@
                     <div class="mb-4">
                         <label for="updateTrening" class="form-label">Trening</label>
                         <select id="updateTrening">
-                            <option>Aerial Hoop</option>
-                            <option>Aerial Yoga</option>
-                            <option>Hammock</option>
-                            <option>Pilates</option>
-                            <option>Core</option>
-                            <option>Stretch</option>
+                            <?php
+                            include "baza/insert.php";
+                            while ($trening = mysqli_fetch_assoc($treninzi)) {
+                            ?>
+                                <option> <?php echo $trening['naziv']; ?></option>
+                            <?php
+                            }
+                            ?>
                         </select>
                     </div>
                     <div class="mb-4">
                         <label for="updateTrener" class="form-label">Trener</label>
                         <select id="updateTrener">
-                            <option>Anja</option>
-                            <option>Milan</option>
-                            <option>Sara</option>
-                            <option>Marija</option>
-                            <option>Marko</option>
+                            <?php
+                            include "baza/insert.php";
+                            while ($trener = mysqli_fetch_assoc($treneri)) {
+                            ?>
+                                <option> <?php echo $trener['ime']; ?></option>
+                            <?php
+                            }
+                            ?>
                         </select>
                     </div>
 
@@ -301,3 +311,10 @@
 </body>
 
 </html>
+
+<!-- <option>Aerial Hoop</option>
+                            <option>Aerial Yoga</option>
+                            <option>Hammock</option>
+                            <option>Pilates</option>
+                            <option>Core</option>
+                            <option>Stretch</option> -->
