@@ -24,7 +24,6 @@
                 <i class="fa fa-times" onclick="hideMenu()"></i>
                 <ul>
                     <li><a href="index.php">POCETNA</a></li>
-                    <!-- <li><a href="zakazivanje.php">ZAKAZIVANJE</a></li> -->
                     <li><a href="treninzi.html">TRENINZI</a></li>
                     <li><a href="kontakt.html">KONTAKT</a></li>
                 </ul>
@@ -51,7 +50,7 @@
 
                     <div class="mb-4">
                         <label for="completeVreme" class="form-label">Vreme</label>
-                        <input type="text" class="form-control" id="completeVreme" placeholder="Unesite vreme termina">
+                        <input type="text" class="form-control" id="completeVreme" required placeholder="Unesite vreme termina">
                     </div>
 
 
@@ -311,10 +310,3 @@
 </body>
 
 </html>
-
-<!-- <option>Aerial Hoop</option>
-                            <option>Aerial Yoga</option>
-                            <option>Hammock</option>
-                            <option>Pilates</option>
-                            <option>Core</option>
-                            <option>Stretch</option> -->
