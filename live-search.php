@@ -12,7 +12,7 @@ if (isset($_POST['input'])) {
         <table id="myTable" class="table">
             <thead class="thead-dark">
                 <tr>
-                    <th scope="col">#</th>
+                    <!-- <th scope="col">#</th> -->
                     <th scope="col">Vreme</th>
                     <th scope="col">Trening</th>
                     <th scope="col">Trener</th>
@@ -22,7 +22,7 @@ if (isset($_POST['input'])) {
                 <?php
                 while ($row = mysqli_fetch_assoc(($result))) {
 
-                    $id = $row['id'];
+                    // $id = $row['id'];
                     $vreme = $row['vreme'];
                     $trening = $row['trening'];
                     $trener = $row['trener'];
@@ -30,7 +30,7 @@ if (isset($_POST['input'])) {
                 ?>
 
                     <tr>
-                        <td><?php echo $id; ?></td>
+                        <!-- <td><?php echo $id; ?></td> -->
                         <td><?php echo $vreme; ?></td>
                         <td><?php echo $trening; ?></td>
                         <td><?php echo $trener; ?></td>
@@ -43,5 +43,7 @@ if (isset($_POST['input'])) {
             </tbody>
         </table>
 <?php
+    } else {
+        echo "Nema trazenog termina. <br><br>";
     }
 }

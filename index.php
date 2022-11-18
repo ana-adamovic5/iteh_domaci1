@@ -23,6 +23,7 @@ if (isset($_POST['usernameModal']) && isset($_POST['passwordModal'])) {
     } else {
         echo `
         <script>
+        alert(Neuspesna prijava. Probajte opet.); 
         console.log("Niste se prijavili.");
         </script>
         `;

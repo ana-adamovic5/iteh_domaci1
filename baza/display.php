@@ -28,7 +28,8 @@ if (isset($_POST['displaySend'])) {
         <td>' . $vreme . '</td>
         <td>' . $trening . '</td>
         <td>' . $trener . '</td>
-        <td><button class="hero-btn purple-btn" onclick="promeniTermin(' . $id . ')">Promeni</button> <button class="hero-btn purple-btn1" onclick="obrisiTermin(' . $id . ')"> Obrisi </button></td>
+        <td><button class="hero-btn purple-btn" onclick="promeniTermin(' . $id . ')">Promeni</button> 
+        <button class="hero-btn purple-btn1" onclick="obrisiTermin(' . $id . ')"> Obrisi </button></td>
       </tr>';
     $number++;
   }
